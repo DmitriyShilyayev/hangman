@@ -40,7 +40,7 @@ function filterInput(event) {
 
 function loadLanguages() {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', '../static/languages.json');
+    xhr.open('GET', 'static/languages.json');
     xhr.onload = () => {
         if (xhr.status == 200) {
             languagesObj = JSON.parse(xhr.responseText);

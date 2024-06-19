@@ -98,6 +98,15 @@ body {
     gap: 10px;
 }
 
+.select {
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 3px;
+    text-align: center;
+}
+
 #gameScreen {
     display: flex;
     flex-direction: column;

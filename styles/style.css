@@ -1,0 +1,185 @@
+@font-face {
+    font-family: Cheque;
+    src: url('../fonts/Cheque-Regular.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    height: 100vh;
+    max-height: 550px;
+    padding: 10px;
+    user-select: none;
+}
+
+.title {
+    font-family: Cheque;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 25px;
+    text-align: center;
+}
+
+#startScreen {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.text-input {
+    padding: 6px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 16px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.button {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: deepskyblue;
+    background-image: linear-gradient(180deg, white, deepskyblue);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    display: block;
+    padding: 6px;
+    height: 30px;
+    min-width: 100px;
+    max-width: 100%;
+}
+
+.button.secondary {
+    background-image: linear-gradient(180deg, lightgray, darkgray);
+}
+
+.options-button,
+.options-wrapper {
+    display: none;
+}
+
+.options-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.options-button:checked ~ .options-wrapper {
+    display: flex;
+}
+
+.options-title {
+    margin-bottom: 10px;
+}
+
+.options-text {
+    text-align: center;
+}
+
+.select-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#gameScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.letter-button {
+    background-color: #f0f0f0;
+    box-shadow: inset black -1px -1px 1px 0px;
+    border: 1px solid gray;
+    cursor: pointer;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    transition: all 0.2s linear;
+}
+
+.letter-button:hover {
+    box-shadow: inset black 0 0 0 0;
+    border: 1px solid black;
+    background-color: #87daf5;
+}
+
+.canvas-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#answerWrapper {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.answer-letter {
+    font-size: 20px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: solid black 1px;
+    background-color: transparent;
+}
+
+.answer-letter.correct {
+    background-color: lightgreen;
+}
+
+.answer-letter.wrong {
+    background-color: palevioletred;
+}
+
+.answer-letter.space {
+    border: none;
+}
+
+#canvas {
+    width: 200px;
+    height: 300px;
+    margin: 15px;
+}
+
+#canvas.blue {
+    background-image: linear-gradient(180deg, lightblue, deepskyblue);
+}
+
+#canvas.gray {
+    background-image: linear-gradient(180deg, lightgray, darkgray);
+}
+
+.hidden {
+    display: none !important;
+}

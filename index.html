@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hangman</title>
+        <link rel="stylesheet" href="/styles/style.css" />
+        <script defer src="scripts/script.js"></script>
+    </head>
+    <body>
+        <h1 class="title" id="pageTitle">Hangman</h1>
+        <form action="#" id="startScreen">
+            <h2 class="subtitle" id="pageSubtitle">Start the Game</h2>
+            <input
+                class="text-input"
+                id="answerInput"
+                type="text"
+                placeholder="Enter the word. You can use only letters, space and dash."
+            />
+            <button type="submit" class="button" id="start">Start</button>
+            <label for="optionsButton" class="button" id="optionsLabel"
+                >Additional</label
+            >
+            <input id="optionsButton" class="options-button" type="checkbox" />
+            <div class="options-wrapper">
+                <h3 class="options-title" id="rulesTitle">Rules:</h3>
+                <p class="options-text" id="rulesText">
+                    The first player thinks up any word. The second player tries
+                    to guess this word by letters. If he guesses right, this
+                    letter reveals in the word, but if he makes a mistake, he
+                    gets one step closer to death!
+                </p>
+            </div>
+            <div class="options-wrapper">
+                <h3 class="options-title" id="difficultyTitle">
+                    Difficulty level
+                </h3>
+                <div class="select-wrapper">
+                    <label for="lives" id="difficultyText"
+                        >Select the number of attempts:</label
+                    >
+                    <select class="select" id="lives">
+                        <option value="12">12</option>
+                        <option selected value="10">10</option>
+                        <option value="8">8</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+            <div class="options-wrapper language-wrapper">
+                <h3 class="options-title" id="languageTitle">Game language</h3>
+                <div class="select-wrapper">
+                    <label for="language" id="languageText"
+                        >Select the game language:</label
+                    >
+                    <select class="select" id="language">
+                        <option value="ru">Русский</option>
+                        <option selected value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="hidden" id="gameScreen">
+            <div class="buttons-wrapper"></div>
+            <div class="canvas-wrapper">
+                <div id="answerWrapper"></div>
+                <canvas id="canvas" width="400" height="600"></canvas>
+            </div>
+
+            <button id="stop" class="button secondary">Stop</button>
+            <button id="restart" class="button secondary hidden">
+                Restart
+            </button>
+        </div>
+    </body>
+</html>
